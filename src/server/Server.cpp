@@ -1,10 +1,13 @@
-#include"server.hpp"
+#include"Server.hpp"
 #include"TcpConnection.h"
-
+#include"Buffer.h"
 #include"log.hpp"
+#include"json.hpp"
 
 #include<string>
 #include<functional>
+
+using json=nlohmann::json;
 
 Server::Server(EventLoop *loop_,const char*ip_,const int port_)
 :_server(loop_,ip_,port_),
@@ -25,11 +28,14 @@ void Server::onConnection(const std::shared_ptr<TcpConnection>&conn)
 {
     if(conn->state()==conn->Connected)
     {
-        log()
+        log();
     }
 }
 
 void Server::onMessage(const std::shared_ptr<TcpConnection> &conn)
 {
-    
+    std::string buf=conn->read_buf()->buf();
+    log("receive:",buf);
+
+    json js=json::parse(buf);
 }
