@@ -16,7 +16,7 @@ Service *Service::instance()
     return &service;
 }
 
-void Service::defaultHandler(const std::shared_ptr<TcpConnection>&conn,json &js)
+void Service::defaultHandler(const TcpConnectionPtr&conn,json &js)
 {
     return;
 }

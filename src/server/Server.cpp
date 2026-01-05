@@ -9,14 +9,14 @@
 
 using json=nlohmann::json;
 
-Server::Server(EventLoop *loop_,const char*ip_,const int port_)
-:_server(loop_,ip_,port_),
+Server::Server(EventLoop *loop_,const InetAddress &listenAddr_,const std::string &nameArg_)
+:_server(loop_,listenAddr_,nameArg_),
 _loop(loop_)
 {
-    _server.set_connection_callback(std::bind(&Server::onConnection,this,std::placeholders::_1));
-    _server.set_message_callback(std::bind(&Server::onMessage,this,std::placeholders::_1));
+    _server.setConnectionCallback(std::bind(&Server::onConnection,this,std::placeholders::_1));
+    _server.setMessageCallback(std::bind(&Server::onMessage,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3));
 
-    _server.SetThreadNums(16);
+    _server.setThreadNum(16);
 }
 
 void Server::start()
@@ -24,17 +24,17 @@ void Server::start()
     
 }
 
-void Server::onConnection(const std::shared_ptr<TcpConnection>&conn)
+void Server::onConnection(const TcpConnectionPtr&conn)
 {
-    if(conn->state()==conn->Connected)
+    if(conn->connected())
     {
         log();
     }
 }
 
-void Server::onMessage(const std::shared_ptr<TcpConnection> &conn)
+void Server::onMessage(const TcpConnectionPtr &conn,Buffer*buffer,Timestamp time)
 {
-    std::string buf=conn->read_buf()->buf();
+    std::string buf=buffer->retrieveAllAsString();
     log("receive:",buf);
 
     json js=json::parse(buf);

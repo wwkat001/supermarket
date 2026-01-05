@@ -1,0 +1,2 @@
+/home/user/github_pro/supermarket/build/CMakeFiles/edit_cache.dir
+/home/user/github_pro/supermarket/build/CMakeFiles/rebuild_cache.dir

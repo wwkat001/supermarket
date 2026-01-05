@@ -7,15 +7,15 @@ class Server
 {
     public:
 
-    Server(EventLoop *loop_,const char*ip_,const int port_);
+    Server(EventLoop *loop_,const InetAddress &listenAddr_,const std::string &nameArg_);
 
     void start();
 
     private:
 
-    void onConnection(const std::shared_ptr<TcpConnection>&conn);
+    void onConnection(const TcpConnectionPtr&conn);
 
-    void onMessage(const std::shared_ptr<TcpConnection> &conn);
+    void onMessage(const TcpConnectionPtr &conn,Buffer*buffer,Timestamp time);
 
     TcpServer _server;
     EventLoop *_loop;
