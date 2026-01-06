@@ -30,7 +30,7 @@ class Service
     void queryAllUser(const TcpConnectionPtr&conn,json &js);
     
     //登陆
-
+    void login(const TcpConnectionPtr&conn,json &js);
     //增M
 
     //删M
