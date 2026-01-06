@@ -19,3 +19,10 @@
                 {"user_id":},{"user_name":" "},{"is_manager":},
                  }
 }
+
+#登陆
+{
+    "msg_id":3,
+    "user_id":11,
+    "password":" "
+}

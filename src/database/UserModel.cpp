@@ -7,6 +7,13 @@ char* UserModel::insert(int _id, const std::string &userName,const std::string &
     return sql;
 }
 
+char *UserModel::query_for_login(int _id, const std::string &password)
+{
+    char sql[200]={0};
+    snprintf(sql,200,"select * from user where id=%d and password='%s'",_id,password);
+    return sql;
+}
+
 std::vector<User> UserModel::query_all()
 {
     char sql[200]={0};
