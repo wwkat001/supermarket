@@ -43,3 +43,21 @@ MYSQL_RES *Connection::query(const std::string &sql)
     }
     return mysql_use_result(_conn);
 }
+
+bool Connection::update(const char *sql)
+{
+    if(mysql_query(_conn,sql))
+    {
+        return false;
+    }
+    return true;
+}
+
+MYSQL_RES *Connection::query(const char *sql)
+{
+    if(mysql_query(_conn,sql))
+    {
+        return nullptr;
+    }
+    return mysql_use_result(_conn);
+}

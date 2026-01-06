@@ -1,0 +1,21 @@
+#增加用户，用于注册
+{
+    "msg_id":1,
+    "user_id":1,
+    "user_name":"test",
+    "password":"123",
+    "is_manager":0
+}
+#返回消息
+{"msg_id":11,"success":1,"errno_msg":" "}
+
+#查询所有用户
+{"msg_id":2}
+#返回消息
+{
+    "msg_id":21,
+    "users_info":{
+                {"user_id":},{"user_name":" "},{"is_manager":},
+                {"user_id":},{"user_name":" "},{"is_manager":},
+                 }
+}

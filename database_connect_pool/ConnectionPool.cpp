@@ -34,7 +34,7 @@ std::shared_ptr<Connection> ConnectionPool::getConnection()
 
 ConnectionPool::ConnectionPool():
 _ip("127.0.0.1"),_port(3306),_userName("root"),_password("123456"),
-_dbName("mysql_learning"),_initSize(10),_maxSize(1000),_maxIdleTIme(60),
+_dbName("supermarket"),_initSize(10),_maxSize(1000),_maxIdleTIme(60),
 _connectionTimeOut(100)
 {
     // if (!loadConfigFile())

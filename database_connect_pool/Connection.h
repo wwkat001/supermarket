@@ -4,6 +4,8 @@
 #include<string>
 #include<ctime>
 
+#include"Model.hpp"
+
 class Connection
 {
     public:
@@ -18,6 +20,10 @@ class Connection
     bool update(const std::string &sql);
 
     MYSQL_RES* query(const std::string &sql);
+
+    bool update(const char *sql);
+
+    MYSQL_RES* query(const char *sql);
 
     void refreshAliveTime(){_aliveTime=clock();};
 

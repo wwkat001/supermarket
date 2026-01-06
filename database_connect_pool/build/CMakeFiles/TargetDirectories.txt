@@ -1,3 +1,0 @@
-/home/user/cpp2/database_connect_pool/build/CMakeFiles/dbcp.dir
-/home/user/cpp2/database_connect_pool/build/CMakeFiles/edit_cache.dir
-/home/user/cpp2/database_connect_pool/build/CMakeFiles/rebuild_cache.dir
