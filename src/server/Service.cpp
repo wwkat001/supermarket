@@ -41,6 +41,7 @@ void Service::regist(const TcpConnectionPtr &conn, json &js)
 
 void Service::queryAllUser(const TcpConnectionPtr &conn, json &js)
 {
+    
 }
 
 void Service::login(const TcpConnectionPtr &conn, json &js)
@@ -48,7 +49,8 @@ void Service::login(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
     int user_id = js["user_id"].get<int>();
     std::string password = js["password"];
-    if(sp->update(_userModel.query_for_login(user_id,password)))
+
+    if(sp->query(_userModel.query_for_login(user_id,password)))
     {
         log("login success");
     }

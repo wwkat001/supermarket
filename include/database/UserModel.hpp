@@ -5,6 +5,7 @@
 
 #include<string>
 #include<vector>
+#include<mysql/mysql.h>
 
 class UserModel :public Model
 {
@@ -15,5 +16,7 @@ class UserModel :public Model
     char * query_for_login(int _id,const std::string &password);
 
     std::vector<User> query_all();
+
+    std::vector<User> allFieldsResToVector(MYSQL_RES*_res);
 
 };

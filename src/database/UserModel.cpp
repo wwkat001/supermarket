@@ -20,3 +20,18 @@ std::vector<User> UserModel::query_all()
     snprintf(sql,200,"SELECT id,name,is_manager FROM user");
     return std::vector<User>();
 }
+
+std::vector<User> UserModel::allFieldsResToVector(MYSQL_RES *_res)
+{
+    std::vector<User> RES;
+    if(_res!=nullptr)
+    {
+        MYSQL_ROW row;
+        while((row=mysql_fetch_row(_res))!=nullptr)
+        {
+            RES.push_back(User(atoi(row[0]),row[1],row[2],atoi(row[3])));
+        }
+        mysql_free_result(_res);
+    }
+    return RES;
+}
