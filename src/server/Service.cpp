@@ -72,3 +72,12 @@ MsgHandler Service::getHandler(int msg_id)
         return _msgHandlerMap[msg_id];
     }
 }
+void Service::add(const TcpConnectionPtr &conn, json &js)
+{
+    std::string goods_name=js["goods_name"];
+    int num=js["num"].get<int>();
+
+    std::shared_ptr<Connection> sp=_cp->getConnection();
+
+    sp->update(_goodsModel.insert(goods_name,num));
+}

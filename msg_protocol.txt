@@ -26,3 +26,9 @@
     "user_id":11,
     "password":" "
 }
+#添加指令
+{
+    "msg_id":4,
+    "goods_name":11,
+    "pgoods_num":" "
+}

@@ -783,8 +783,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/user/github_pro/supermarket/build",
-		"source" : "/home/user/github_pro/supermarket"
+		"build" : "/home/user/cs/supermarket/build",
+		"source" : "/home/user/cs/supermarket"
 	},
 	"version" : 
 	{

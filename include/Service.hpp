@@ -10,6 +10,7 @@
 #include"json.hpp"
 #include"UserModel.hpp"
 #include"Log.hpp"
+#include"GoodsModel.hpp"
 
 using json=nlohmann::json;
 
@@ -32,7 +33,7 @@ class Service
     //登陆
     void login(const TcpConnectionPtr&conn,json &js);
     //增M
-
+    void add(const TcpConnectionPtr&conn,json &js);
     //删M
 
     //改M
@@ -58,5 +59,6 @@ class Service
     std::unordered_map<int,MsgHandler> _msgHandlerMap;
 
     UserModel _userModel;
+    GoodsModel _goodsModel;
 };
 

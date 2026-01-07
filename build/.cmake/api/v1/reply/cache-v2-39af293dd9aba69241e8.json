@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/user/github_pro/supermarket/build"
+			"value" : "/home/user/cs/supermarket/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -555,7 +555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/user/github_pro/supermarket/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/user/cs/supermarket/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -615,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/user/github_pro/supermarket"
+			"value" : "/home/user/cs/supermarket"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1167,7 +1167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/user/github_pro/supermarket/build"
+			"value" : "/home/user/cs/supermarket/build"
 		},
 		{
 			"name" : "SupermarketManager_IS_TOP_LEVEL",
@@ -1191,7 +1191,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/user/github_pro/supermarket"
+			"value" : "/home/user/cs/supermarket"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

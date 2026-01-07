@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/github_pro/supermarket
+CMAKE_SOURCE_DIR = /home/user/cs/supermarket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/github_pro/supermarket/build
+CMAKE_BINARY_DIR = /home/user/cs/supermarket/build
 
 #=============================================================================
 # Directory level rules for the build root directory
