@@ -45,10 +45,22 @@ void Service::regist(const TcpConnectionPtr &conn, json &js)
         log("user_id:", user_id, "register success");
 
         // 发送返回消息
+        json response;
+        response["msg_id"] = 11;
+        response["success"] =1;
+        response["error_msg"]=" ";
+
+        conn->send(response.dump());
     }
     else
     {
         log("user_id:", user_id, "register failed");
+        json response;
+        response["msg_id"] = 11;
+        response["success"] =0;
+        response["error_msg"]=" ";
+
+        conn->send(response.dump());
     }
 }
 
@@ -60,10 +72,12 @@ void Service::queryAllUser(const TcpConnectionPtr &conn, json &js)
 void Service::login(const TcpConnectionPtr &conn, json &js)
 {
     std::shared_ptr<Connection> sp = _cp->getConnection();
+
     int user_id = js["user_id"].get<int>();
     std::string password = js["password"];
 
-    if(sp->query(_userModel.query_for_login(user_id,password)))
+    std::vector<User> res=_userModel.allFieldsResToVector(sp->query(_userModel.query_for_login(user_id, password)));
+    if (res.size()==1)
     {
         log("login success");
     }
@@ -75,10 +89,10 @@ void Service::login(const TcpConnectionPtr &conn, json &js)
 
 void Service::add(const TcpConnectionPtr &conn, json &js)
 {
-    std::string goods_name=js["goods_name"];
-    int num=js["num"].get<int>();
+    std::string goods_name = js["goods_name"];
+    int num = js["num"].get<int>();
 
-    std::shared_ptr<Connection> sp=_cp->getConnection();
+    std::shared_ptr<Connection> sp = _cp->getConnection();
 
-    sp->update(_goodsModel.insert(goods_name,num));
+    sp->update(_goodsModel.insert(goods_name, num));
 }

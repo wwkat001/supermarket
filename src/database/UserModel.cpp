@@ -14,6 +14,13 @@ char *UserModel::query_for_login(int _id, const std::string &password)
     return sql;
 }
 
+char *UserModel::deleteByUserId(int _id)
+{
+    char sql[200]={0};
+    snprintf(sql,200,"delete from user where id=%d",_id);    
+    return nullptr;
+}
+
 std::vector<User> UserModel::query_all()
 {
     char sql[200]={0};

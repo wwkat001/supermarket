@@ -32,8 +32,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/user/cs/supermarket/build",
-		"source" : "/home/user/cs/supermarket"
+		"build" : "/home/user/github_pro/supermarket/build",
+		"source" : "/home/user/github_pro/supermarket"
 	},
 	"version" : 
 	{

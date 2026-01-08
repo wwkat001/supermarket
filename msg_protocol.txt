@@ -30,5 +30,5 @@
 {
     "msg_id":4,
     "goods_name":11,
-    "pgoods_num":" "
+    "goods_num":" "
 }
