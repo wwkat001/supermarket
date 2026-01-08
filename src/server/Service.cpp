@@ -20,6 +20,19 @@ void Service::defaultHandler(const TcpConnectionPtr &conn, json &js)
     return;
 }
 
+MsgHandler Service::getHandler(int msg_id)
+{
+    auto it = _msgHandlerMap.find(msg_id);
+    if (it == _msgHandlerMap.end())
+    {
+        return std::bind(&Service::defaultHandler, this, std::placeholders::_1, std::placeholders::_2);
+    }
+    else
+    {
+        return _msgHandlerMap[msg_id];
+    }
+}
+
 void Service::regist(const TcpConnectionPtr &conn, json &js)
 {
     std::shared_ptr<Connection> sp = _cp->getConnection();
@@ -60,18 +73,6 @@ void Service::login(const TcpConnectionPtr &conn, json &js)
     }
 }
 
-MsgHandler Service::getHandler(int msg_id)
-{
-    auto it = _msgHandlerMap.find(msg_id);
-    if (it == _msgHandlerMap.end())
-    {
-        return std::bind(&Service::defaultHandler, this, std::placeholders::_1, std::placeholders::_2);
-    }
-    else
-    {
-        return _msgHandlerMap[msg_id];
-    }
-}
 void Service::add(const TcpConnectionPtr &conn, json &js)
 {
     std::string goods_name=js["goods_name"];
