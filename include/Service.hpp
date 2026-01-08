@@ -34,12 +34,14 @@ class Service
     void login(const TcpConnectionPtr&conn,json &js);
     //增M
     void add(const TcpConnectionPtr&conn,json &js);
-    //删M
-
+    //删User
+    void deleteUser(const TcpConnectionPtr&conn,json &js);
+    //删Goods
+     void deleteGoods(const TcpConnectionPtr&conn,json &js);
     //改M
-
+     void updateGoodsNum(const TcpConnectionPtr&conn,json &js);
     //查
-
+    void queryAllGoods(const TcpConnectionPtr&conn,json &js);
     //精准查询
 
     //用户管理 M
