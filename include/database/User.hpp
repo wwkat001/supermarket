@@ -1,6 +1,12 @@
 #pragma once
 
 #include<string>
+#include<vector>
+#include<mysql/mysql.h>
+
+#include"json.hpp"
+
+using json=nlohmann::json;
 
 class User
 {
@@ -11,6 +17,12 @@ class User
     {
 
     }
+
+    int getId(){return id;};
+
+    std::string getName(){return name;};
+
+    bool getIsManager(){return is_manager;};
 
     private:
     int id;

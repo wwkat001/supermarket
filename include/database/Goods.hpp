@@ -10,6 +10,10 @@ class Goods
 
     };
 
+    std::string getName(){return name;};
+
+    int getNum(){return num;};
+
     private:
     std::string name;
     int num;

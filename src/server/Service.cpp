@@ -66,7 +66,17 @@ void Service::regist(const TcpConnectionPtr &conn, json &js)
 
 void Service::queryAllUser(const TcpConnectionPtr &conn, json &js)
 {
+    std::shared_ptr<Connection> sp = _cp->getConnection();
     
+    std::vector<User> user_info;
+    user_info=_userModel.allFieldsResToVector(sp->query(_userModel.query_all()));
+
+    json response;
+    response["msg_id"]=2;
+    response["users_info"]=_userModel.allFieldsUserToStringInVector(user_info);
+
+    conn->send(response.dump());
+
 }
 
 void Service::login(const TcpConnectionPtr &conn, json &js)
@@ -128,5 +138,8 @@ void Service::updateGoodsNum(const TcpConnectionPtr &conn, json &js)
 void Service::queryAllGoods(const TcpConnectionPtr &conn, json &js)
 {
     std::shared_ptr<Connection> sp = _cp->getConnection();
-    sp->query(_goodsModel.queryAllGoods());
+
+    std::vector<Goods> goods_info;
+    goods_info=_goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryAllGoods()));
+    
 }

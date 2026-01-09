@@ -3,10 +3,6 @@
 #include"Model.hpp"
 #include"User.hpp"
 
-#include<string>
-#include<vector>
-#include<mysql/mysql.h>
-
 class UserModel :public Model
 {
     public:
@@ -17,9 +13,10 @@ class UserModel :public Model
 
     char * deleteByUserId(int _id);
 
-
-    std::vector<User> query_all();
+    char * query_all();
 
     std::vector<User> allFieldsResToVector(MYSQL_RES*_res);
+
+    std::vector<std::string> allFieldsUserToStringInVector(std::vector<User> user_info);
 
 };
