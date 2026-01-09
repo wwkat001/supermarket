@@ -10,5 +10,9 @@ class GoodsModel
 
     char* insert(const std::string &_name,int _num);
 
+    char *deleteGoodsByName(std::string &_name);
 
+    char *updateGoodsNumByName(std::string &_name,int _num);
+
+    char *queryAllGoods();
 };

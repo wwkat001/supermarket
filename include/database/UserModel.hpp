@@ -17,6 +17,7 @@ class UserModel :public Model
 
     char * deleteByUserId(int _id);
 
+
     std::vector<User> query_all();
 
     std::vector<User> allFieldsResToVector(MYSQL_RES*_res);

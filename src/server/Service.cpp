@@ -96,3 +96,37 @@ void Service::add(const TcpConnectionPtr &conn, json &js)
 
     sp->update(_goodsModel.insert(goods_name, num));
 }
+
+void Service::deleteUser(const TcpConnectionPtr &conn, json &js)
+{
+   
+   int user_id = js["user_id"].get<int>();
+   std::shared_ptr<Connection> sp = _cp->getConnection();
+
+   sp->update(_userModel.deleteByUserId(user_id));
+   
+}
+
+void Service::deleteGoods(const TcpConnectionPtr &conn, json &js)
+{
+
+    std::string goods_name = js["goods_name"];
+
+     std::shared_ptr<Connection> sp = _cp->getConnection();
+     sp->update(_goodsModel.deleteGoodsByName(goods_name));
+
+}
+
+void Service::updateGoodsNum(const TcpConnectionPtr &conn, json &js)
+{
+   int goods_num= js["goods_num"].get<int>();
+   std::string goods_name = js["goods_name"];
+    std::shared_ptr<Connection> sp = _cp->getConnection();
+    sp->update(_goodsModel.updateGoodsNumByName(goods_name,goods_num));
+}
+
+void Service::queryAllGoods(const TcpConnectionPtr &conn, json &js)
+{
+    std::shared_ptr<Connection> sp = _cp->getConnection();
+    sp->query(_goodsModel.queryAllGoods());
+}

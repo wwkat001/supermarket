@@ -32,3 +32,22 @@
     "goods_name":11,
     "goods_num":" "
 }
+#删除用户指令
+{
+    "msg_id":5,
+    ”user_id"
+
+}
+#删除商品指令{
+
+    "msg_id":6,
+    "goods_name":
+}
+#更改商品数量{
+    "msg_id":7
+    "goods_name":
+    "goods_num"
+}
+#查所有商品信息{
+    "msg_id":8
+}
