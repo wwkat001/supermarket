@@ -16,12 +16,13 @@ _loop(loop_)
     _server.setConnectionCallback(std::bind(&Server::onConnection,this,std::placeholders::_1));
     _server.setMessageCallback(std::bind(&Server::onMessage,this,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3));
 
-    _server.setThreadNum(16);
+    _server.setThreadNum(2);
 }
 
 void Server::start()
 {
-    
+    Service::instance();
+    _server.start();
 }
 
 void Server::onConnection(const TcpConnectionPtr&conn)
@@ -38,4 +39,6 @@ void Server::onMessage(const TcpConnectionPtr &conn,Buffer*buffer,Timestamp time
     log("receive:",buf);
 
     json js=json::parse(buf);
+    auto msgHander=Service::instance()->getHandler(js["msg_id"].get<int>());
+    msgHander(conn,js);
 }

@@ -2,3 +2,5 @@
 数据库操作: update :Connection*.update("sql语句")  返回是否成功   
 query:Connection*.update("sql语句")  返回查询结果
 获取连接 ConnectionPool.getConnetion()  获取一个可用连接
+
+{"msg_id":1,"user_id":1,"user_name":"test","password":"123","is_manager":true}

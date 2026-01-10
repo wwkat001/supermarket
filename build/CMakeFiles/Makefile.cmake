@@ -7,10 +7,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/user/cs/supermarket/CMakeLists.txt"
+  "/home/user/github_pro/supermarket/CMakeLists.txt"
   "CMakeFiles/3.30.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
+  "/home/user/github_pro/supermarket/src/CMakeLists.txt"
+  "/home/user/github_pro/supermarket/src/client/CMakeLists.txt"
+  "/home/user/github_pro/supermarket/src/server/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -40,9 +43,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/server/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/client/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/SupermarketManager.dir/DependInfo.cmake"
+  "src/server/CMakeFiles/Server.dir/DependInfo.cmake"
+  "src/client/CMakeFiles/test.dir/DependInfo.cmake"
   )

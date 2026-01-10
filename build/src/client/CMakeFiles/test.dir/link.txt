@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -g -rdynamic CMakeFiles/test.dir/client.cpp.o CMakeFiles/test.dir/test.cpp.o -o /home/user/github_pro/supermarket/bin/test

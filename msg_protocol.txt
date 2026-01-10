@@ -4,7 +4,7 @@
     "user_id":1,
     "user_name":"test",
     "password":"123",
-    "is_manager":0
+    "is_manager":1
 }
 #返回消息
 {"msg_id":11,"success":1,"errno_msg":" "}
@@ -105,13 +105,14 @@
     "msg_id":10
      "goods_name":
       "goods_num"
-      "errno_msg"
+
 }
 #返回消息{
     "msg_id"：101,
      "success"
      "goods_name":
       "goods_num"
+    "errno_msg"
 }
 #进货{
      "msg_id":12

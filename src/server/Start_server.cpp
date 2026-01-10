@@ -2,9 +2,11 @@
 
 int main(int argc,char **argv)
 {
-    EventLoop *loop;
+    EventLoop loop;
     InetAddress addr(atoi(argv[1]),argv[2]);
-    Server server(loop,addr,"market");
+    Server server(&loop,addr,"market");
     server.start();
-    loop->loop();
+    loop.loop();
+
+    return 0;
 }

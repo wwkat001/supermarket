@@ -1,3 +1,10 @@
-/home/user/cs/supermarket/build/CMakeFiles/SupermarketManager.dir
-/home/user/cs/supermarket/build/CMakeFiles/edit_cache.dir
-/home/user/cs/supermarket/build/CMakeFiles/rebuild_cache.dir
+/home/user/github_pro/supermarket/build/CMakeFiles/edit_cache.dir
+/home/user/github_pro/supermarket/build/CMakeFiles/rebuild_cache.dir
+/home/user/github_pro/supermarket/build/src/CMakeFiles/edit_cache.dir
+/home/user/github_pro/supermarket/build/src/CMakeFiles/rebuild_cache.dir
+/home/user/github_pro/supermarket/build/src/server/CMakeFiles/Server.dir
+/home/user/github_pro/supermarket/build/src/server/CMakeFiles/edit_cache.dir
+/home/user/github_pro/supermarket/build/src/server/CMakeFiles/rebuild_cache.dir
+/home/user/github_pro/supermarket/build/src/client/CMakeFiles/test.dir
+/home/user/github_pro/supermarket/build/src/client/CMakeFiles/edit_cache.dir
+/home/user/github_pro/supermarket/build/src/client/CMakeFiles/rebuild_cache.dir

@@ -47,7 +47,7 @@ class Service
     //商品销售(查询是否存在 存在 减数量)
     void saleGoods(const TcpConnectionPtr&conn,json &js);
     //进货
-     void  purchaseGoods(const TcpConnectionPtr&conn,json &js);
+    void  purchaseGoods(const TcpConnectionPtr&conn,json &js);
 
     MsgHandler getHandler(int msg_id);
 

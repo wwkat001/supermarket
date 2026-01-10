@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/cs/supermarket
+CMAKE_SOURCE_DIR = /home/user/github_pro/supermarket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/cs/supermarket/build
+CMAKE_BINARY_DIR = /home/user/github_pro/supermarket/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles /home/user/cs/supermarket/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/github_pro/supermarket/build/CMakeFiles /home/user/github_pro/supermarket/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/github_pro/supermarket/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SupermarketManager
+# Target rules for targets named Server
 
 # Build rule for target.
-SupermarketManager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SupermarketManager
-.PHONY : SupermarketManager
+Server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server
+.PHONY : Server
 
 # fast build rule for target.
-SupermarketManager/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SupermarketManager.dir/build.make CMakeFiles/SupermarketManager.dir/build
-.PHONY : SupermarketManager/fast
+Server/fast:
+	$(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/Server.dir/build.make src/server/CMakeFiles/Server.dir/build
+.PHONY : Server/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f src/client/CMakeFiles/test.dir/build.make src/client/CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 # Help Target
 help:
@@ -137,7 +150,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SupermarketManager"
+	@echo "... Server"
+	@echo "... test"
 .PHONY : help
 
 

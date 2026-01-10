@@ -1,0 +1,164 @@
+[
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/Server.cpp.o -c /home/user/github_pro/supermarket/src/server/Server.cpp",
+  "file": "/home/user/github_pro/supermarket/src/server/Server.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/Server.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/Service.cpp.o -c /home/user/github_pro/supermarket/src/server/Service.cpp",
+  "file": "/home/user/github_pro/supermarket/src/server/Service.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/Service.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/Start_server.cpp.o -c /home/user/github_pro/supermarket/src/server/Start_server.cpp",
+  "file": "/home/user/github_pro/supermarket/src/server/Start_server.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/Start_server.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/database/GoodsModel.cpp.o -c /home/user/github_pro/supermarket/src/database/GoodsModel.cpp",
+  "file": "/home/user/github_pro/supermarket/src/database/GoodsModel.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/database/GoodsModel.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/database/UserModel.cpp.o -c /home/user/github_pro/supermarket/src/database/UserModel.cpp",
+  "file": "/home/user/github_pro/supermarket/src/database/UserModel.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/database/UserModel.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Acceptor.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Acceptor.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Acceptor.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Acceptor.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Buffer.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Buffer.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Buffer.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Buffer.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Channel.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Channel.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Channel.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Channel.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/CurrentThread.cpp.o -c /home/user/github_pro/supermarket/tcp/src/CurrentThread.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/CurrentThread.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/CurrentThread.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/DefaultPoller.cpp.o -c /home/user/github_pro/supermarket/tcp/src/DefaultPoller.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/DefaultPoller.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/DefaultPoller.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/EPollPoller.cpp.o -c /home/user/github_pro/supermarket/tcp/src/EPollPoller.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/EPollPoller.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/EPollPoller.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/EventLoop.cpp.o -c /home/user/github_pro/supermarket/tcp/src/EventLoop.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/EventLoop.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/EventLoop.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/EventLoopThread.cpp.o -c /home/user/github_pro/supermarket/tcp/src/EventLoopThread.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/EventLoopThread.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/EventLoopThread.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/EventLoopThreadPool.cpp.o -c /home/user/github_pro/supermarket/tcp/src/EventLoopThreadPool.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/EventLoopThreadPool.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/EventLoopThreadPool.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/InetAddress.cpp.o -c /home/user/github_pro/supermarket/tcp/src/InetAddress.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/InetAddress.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/InetAddress.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Logger.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Logger.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Logger.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Logger.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Poller.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Poller.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Poller.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Poller.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Socket.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Socket.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Socket.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Socket.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/TcpConnection.cpp.o -c /home/user/github_pro/supermarket/tcp/src/TcpConnection.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/TcpConnection.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/TcpConnection.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/TcpServer.cpp.o -c /home/user/github_pro/supermarket/tcp/src/TcpServer.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/TcpServer.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/TcpServer.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Thread.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Thread.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Thread.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Thread.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/tcp/src/Timestamp.cpp.o -c /home/user/github_pro/supermarket/tcp/src/Timestamp.cpp",
+  "file": "/home/user/github_pro/supermarket/tcp/src/Timestamp.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/tcp/src/Timestamp.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/database_connect_pool/Connection.cpp.o -c /home/user/github_pro/supermarket/database_connect_pool/Connection.cpp",
+  "file": "/home/user/github_pro/supermarket/database_connect_pool/Connection.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/database_connect_pool/Connection.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/database_connect_pool/ConnectionPool.cpp.o -c /home/user/github_pro/supermarket/database_connect_pool/ConnectionPool.cpp",
+  "file": "/home/user/github_pro/supermarket/database_connect_pool/ConnectionPool.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/database_connect_pool/ConnectionPool.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/server",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/Server.dir/__/__/database_connect_pool/main.cpp.o -c /home/user/github_pro/supermarket/database_connect_pool/main.cpp",
+  "file": "/home/user/github_pro/supermarket/database_connect_pool/main.cpp",
+  "output": "src/server/CMakeFiles/Server.dir/__/__/database_connect_pool/main.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/client",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/test.dir/client.cpp.o -c /home/user/github_pro/supermarket/src/client/client.cpp",
+  "file": "/home/user/github_pro/supermarket/src/client/client.cpp",
+  "output": "src/client/CMakeFiles/test.dir/client.cpp.o"
+},
+{
+  "directory": "/home/user/github_pro/supermarket/build/src/client",
+  "command": "/usr/bin/c++  -I/home/user/github_pro/supermarket/tcp/include -I/home/user/github_pro/supermarket/include -I/home/user/github_pro/supermarket/include/database -I/home/user/github_pro/supermarket/thirdpart -I/home/user/github_pro/supermarket/database_connect_pool -g -g -o CMakeFiles/test.dir/test.cpp.o -c /home/user/github_pro/supermarket/src/client/test.cpp",
+  "file": "/home/user/github_pro/supermarket/src/client/test.cpp",
+  "output": "src/client/CMakeFiles/test.dir/test.cpp.o"
+}
+]

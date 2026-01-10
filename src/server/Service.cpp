@@ -7,17 +7,17 @@
 Service::Service() : _cp(ConnectionPool::getConnectionPool())
 {
     // 注册服务
-    _msgHandlerMap.emplace(1,std::bind(&Service::regist,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::queryAllUser,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::login,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::add,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::deleteUser,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::deleteGoods,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::updateGoodsNum,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::queryAllGoods,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::querySingleGoods,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::saleGoods,std::placeholders::_1,std::placeholders::_2));
-    _msgHandlerMap.emplace(1,std::bind(&Service::purchaseGoods,std::placeholders::_1,std::placeholders::_2));
+    _msgHandlerMap.insert({1, std::bind(&Service::regist, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({2, std::bind(&Service::queryAllUser, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({3, std::bind(&Service::login, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({4, std::bind(&Service::add, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({5, std::bind(&Service::deleteUser, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({6, std::bind(&Service::deleteGoods, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({7, std::bind(&Service::updateGoodsNum, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({8, std::bind(&Service::queryAllGoods, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({9, std::bind(&Service::querySingleGoods, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({10, std::bind(&Service::saleGoods, this, std::placeholders::_1, std::placeholders::_2)});
+    _msgHandlerMap.insert({12, std::bind(&Service::purchaseGoods, this, std::placeholders::_1, std::placeholders::_2)});
 }
 
 Service *Service::instance()
@@ -51,7 +51,7 @@ void Service::regist(const TcpConnectionPtr &conn, json &js)
     std::string userName = js["user_name"];
     std::string password = js["password"];
     bool is_manager = js["is_manager"].get<bool>();
-    if (sp->update(_userModel.insert(user_id, userName, password, is_manager)))
+    if (sp->update(_userModel.insert(user_id, userName, password, is_manager).c_str()))
     {
         log("user_id:", user_id, "register success");
 
@@ -80,7 +80,7 @@ void Service::queryAllUser(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
 
     std::vector<User> user_info;
-    user_info = _userModel.allFieldsResToVector(sp->query(_userModel.query_all()));
+    user_info = _userModel.allFieldsResToVector(sp->query(_userModel.query_all().c_str()));
 
     json response;
     response["msg_id"] = 21;
@@ -97,7 +97,7 @@ void Service::login(const TcpConnectionPtr &conn, json &js)
     int user_id = js["user_id"].get<int>();
     std::string password = js["password"];
 
-    std::vector<User> res = _userModel.allFieldsResToVector(sp->query(_userModel.query_for_login(user_id, password)));
+    std::vector<User> res = _userModel.allFieldsResToVector(sp->query(_userModel.query_for_login(user_id, password).c_str()));
 
     json response;
 
@@ -136,7 +136,7 @@ void Service::add(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
 
     json response;
-    if (sp->update(_goodsModel.insert(goods_name, num)))
+    if (sp->update(_goodsModel.insert(goods_name, num).c_str()))
     {
         response["msg_id"] = 41;
         response["success"] = 1;
@@ -156,7 +156,7 @@ void Service::deleteUser(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
 
     json response;
-    if (sp->update(_userModel.deleteByUserId(user_id)))
+    if (sp->update(_userModel.deleteByUserId(user_id).c_str()))
     {
         response["msg_id"] = 51;
         response["success"] = 1;
@@ -176,7 +176,7 @@ void Service::deleteGoods(const TcpConnectionPtr &conn, json &js)
 
     std::shared_ptr<Connection> sp = _cp->getConnection();
     json response;
-    if (sp->update(_goodsModel.deleteGoodsByName(goods_name)))
+    if (sp->update(_goodsModel.deleteGoodsByName(goods_name).c_str()))
     {
         response["msg_id"] = 61;
         response["success"] = 1;
@@ -196,7 +196,7 @@ void Service::updateGoodsNum(const TcpConnectionPtr &conn, json &js)
     std::string goods_name = js["goods_name"];
     std::shared_ptr<Connection> sp = _cp->getConnection();
     json response;
-    if (sp->update(_goodsModel.updateGoodsNumByName(goods_name, goods_num)))
+    if (sp->update(_goodsModel.updateGoodsNumByName(goods_name, goods_num).c_str()))
     {
         response["msg_id"] = 71;
         response["success"] = 1;
@@ -214,7 +214,7 @@ void Service::queryAllGoods(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
     sp->query(_goodsModel.queryAllGoods());
     std::vector<Goods> goods_info;
-    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryAllGoods()));
+    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryAllGoods().c_str()));
     json response;
     response["msg_id"] = 81;
     response["goods_info"] = _goodsModel.allFieldsGoodsToStringInVector(goods_info);
@@ -227,12 +227,13 @@ void Service::querySingleGoods(const TcpConnectionPtr &conn, json &js)
     std::shared_ptr<Connection> sp = _cp->getConnection();
 
     std::vector<Goods> goods_info;
-    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryByName(goods_name)));
+    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryByName(goods_name).c_str()));
     json response;
     if (goods_info.empty())
     {
-
+        response["msg_id"] = 91;
         response["success"] = 0;
+        response["goods_info"] = " ";
     }
     else
     {
@@ -252,15 +253,14 @@ void Service::saleGoods(const TcpConnectionPtr &conn, json &js)
 
     json response;
     std::vector<Goods> goods_info;
-    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryByName(goods_name)));
+    goods_info = _goodsModel.allFieldsResToVector(sp->query(_goodsModel.queryByName(goods_name).c_str()));
 
     if (goods_info.empty())
     {
         response["msg_id"] = 91;
         response["success"] = 0;
         response["goods_info"] = " ";
-        response["error_msg"]="no such goods";
-        
+        response["error_msg"] = "no such goods";
     }
     else
     {
@@ -268,46 +268,43 @@ void Service::saleGoods(const TcpConnectionPtr &conn, json &js)
 
         if (num >= goods_num)
         {
-            num=num-goods_num;
-            sp->update(_goodsModel.updateGoodsNumByName(goods_name,num));
-             goods_info[0].setNum(num);
-               response["msg_id"] = 101;
-        response["success"] = 1;
-        response["goods_info"] = _goodsModel.allFieldsGoodsToStringInVector(goods_info);
-        response["error_msg"]=" ";
-          
+            num = num - goods_num;
+            sp->update(_goodsModel.updateGoodsNumByName(goods_name, num).c_str());
+            goods_info[0].setNum(num);
+            response["msg_id"] = 101;
+            response["success"] = 1;
+            response["goods_info"] = _goodsModel.allFieldsGoodsToStringInVector(goods_info);
+            response["error_msg"] = " ";
         }
-        else{
-        response["msg_id"] = 101;
-        response["success"] = 0;
-        response["goods_info"] = " ";   
-        response["error_msg"]="not enough";
-        
+        else
+        {
+            response["msg_id"] = 101;
+            response["success"] = 0;
+            response["goods_info"] = " ";
+            response["error_msg"] = "not enough";
         }
-      
     }
 
     conn->send(response.dump());
 }
 
 void Service::purchaseGoods(const TcpConnectionPtr &conn, json &js)
-{  
-     int goods_num = js["goods_num"].get<int>();
+{
+    int goods_num = js["goods_num"].get<int>();
     std::string goods_name = js["goods_name"];
     std::shared_ptr<Connection> sp = _cp->getConnection();
-  
-      json response;
-    if((sp->update(_goodsModel.insert(goods_name,goods_num)))){
-         
+
+    json response;
+    if ((sp->update(_goodsModel.insert(goods_name, goods_num).c_str())))
+    {
+
         response["msg_id"] = 121;
         response["success"] = 1;
-
     }
-    else{
+    else
+    {
         response["msg_id"] = 121;
         response["success"] = 0;
-
     }
-      conn->send(response.dump());
-
+    conn->send(response.dump());
 }
