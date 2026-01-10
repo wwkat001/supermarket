@@ -59,3 +59,4 @@ std::vector<std::string> GoodsModel::allFieldsGoodsToStringInVector(std::vector<
     }
     return res;
 }
+

@@ -34,8 +34,7 @@ class Service
     void login(const TcpConnectionPtr&conn,json &js);
     //增M
     void add(const TcpConnectionPtr&conn,json &js);
-    //删User
-    void deleteUser(const TcpConnectionPtr&conn,json &js);
+     void deleteUser(const TcpConnectionPtr&conn,json &js);
     //删Goods
      void deleteGoods(const TcpConnectionPtr&conn,json &js);
     //改M
@@ -43,12 +42,12 @@ class Service
     //查
     void queryAllGoods(const TcpConnectionPtr&conn,json &js);
     //精准查询
+    void querySingleGoods(const TcpConnectionPtr&conn,json &js);
 
-    //用户管理 M
-
-    //商品销售
-
+    //商品销售(查询是否存在 存在 减数量)
+    void saleGoods(const TcpConnectionPtr&conn,json &js);
     //进货
+     void  purchaseGoods(const TcpConnectionPtr&conn,json &js);
 
     MsgHandler getHandler(int msg_id);
 

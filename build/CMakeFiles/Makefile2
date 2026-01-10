@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/github_pro/supermarket
+CMAKE_SOURCE_DIR = /home/user/cs/supermarket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/github_pro/supermarket/build
+CMAKE_BINARY_DIR = /home/user/cs/supermarket/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/SupermarketManager.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,8 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/SupermarketManager.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SupermarketManager.dir
+
+# All Build rule for target.
+CMakeFiles/SupermarketManager.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SupermarketManager.dir/build.make CMakeFiles/SupermarketManager.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SupermarketManager.dir/build.make CMakeFiles/SupermarketManager.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/user/cs/supermarket/build/CMakeFiles --progress-num= "Built target SupermarketManager"
+.PHONY : CMakeFiles/SupermarketManager.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SupermarketManager.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SupermarketManager.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles 0
+.PHONY : CMakeFiles/SupermarketManager.dir/rule
+
+# Convenience name for target.
+SupermarketManager: CMakeFiles/SupermarketManager.dir/rule
+.PHONY : SupermarketManager
+
+# clean rule for target.
+CMakeFiles/SupermarketManager.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SupermarketManager.dir/build.make CMakeFiles/SupermarketManager.dir/clean
+.PHONY : CMakeFiles/SupermarketManager.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

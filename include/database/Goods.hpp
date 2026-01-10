@@ -14,6 +14,8 @@ class Goods
 
     int getNum(){return num;};
 
+    void setNum(int _num){num=_num;};
+
     private:
     std::string name;
     int num;

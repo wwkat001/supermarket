@@ -15,6 +15,9 @@ class GoodsModel :public Model
 
     char *queryAllGoods();
 
+    char* queryByName(std::string &_name);
+   
+
     std::vector<Goods> allFieldsResToVector(MYSQL_RES *res);
 
     std::vector<std::string> allFieldsGoodsToStringInVector(std::vector<Goods> goods_info);

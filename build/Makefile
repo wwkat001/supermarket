@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/github_pro/supermarket
+CMAKE_SOURCE_DIR = /home/user/cs/supermarket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/github_pro/supermarket/build
+CMAKE_BINARY_DIR = /home/user/cs/supermarket/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/github_pro/supermarket/build/CMakeFiles /home/user/github_pro/supermarket/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles /home/user/cs/supermarket/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/github_pro/supermarket/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/cs/supermarket/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,6 +116,19 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named SupermarketManager
+
+# Build rule for target.
+SupermarketManager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SupermarketManager
+.PHONY : SupermarketManager
+
+# fast build rule for target.
+SupermarketManager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SupermarketManager.dir/build.make CMakeFiles/SupermarketManager.dir/build
+.PHONY : SupermarketManager/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +137,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... SupermarketManager"
 .PHONY : help
 
 

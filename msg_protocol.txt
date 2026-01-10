@@ -25,6 +25,13 @@
     "msg_id":3,
     "user_id":11,
     "password":" "
+#返回消息
+『{
+    "msg_id":31
+    "is_manager":
+    "success"
+}
+
 }
 #添加指令
 {
@@ -32,22 +39,89 @@
     "goods_name":11,
     "goods_num":" "
 }
+#返回消息
+{
+    "msg_id":41,
+    "success"
+}
 #删除用户指令
 {
     "msg_id":5,
     ”user_id"
 
 }
+#返回消息
+{
+    "msg_id":51,
+    "success"
+}
 #删除商品指令{
 
     "msg_id":6,
     "goods_name":
+}
+#返回消息
+{
+    "msg_id":61,
+    "success"
 }
 #更改商品数量{
     "msg_id":7
     "goods_name":
     "goods_num"
 }
+#返回消息
+{
+    "msg_id":71,
+    "success"
+}
 #查所有商品信息{
     "msg_id":8
+}
+#返回消息{
+    "msg_id"：81,
+    "goods_info":{
+                {"   ":},{:"   "},{"   ":},
+                {"  ":},{":"   "},{"   ":},
+                 }
+
+}
+#精准查询{
+    "msg_id":9
+     "goods_name":
+}
+#返回消息{
+    "msg_id"：91,
+    "success“
+    "goods_info":{
+                {"   ":},{:"   "},{"   ":},
+                {"  ":},{":"   "},{"   ":},
+                 }
+
+}
+
+#商品销售(查询是否存在 存在 减数量)
+{
+    "msg_id":10
+     "goods_name":
+      "goods_num"
+      "errno_msg"
+}
+#返回消息{
+    "msg_id"：101,
+     "success"
+     "goods_name":
+      "goods_num"
+}
+#进货{
+     "msg_id":12
+      "goods_name":
+      "goods_num"
+
+}
+#返回消息{
+
+     "msg_id"：121,
+     "goods_name":
+      "goods_num"
 }

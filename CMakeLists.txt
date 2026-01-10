@@ -10,3 +10,5 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/include/database)
 include_directories(${PROJECT_SOURCE_DIR}/thirdpart)
 include_directories(${PROJECT_SOURCE_DIR}/database_connect_pool)
+
+add_executable(SupermarketManager ${PROJECT_SOURCE_DIR}/bin)
