@@ -1,16 +1,18 @@
 #include "UserModel.hpp"
+#include"Log.hpp"
 
 std::string UserModel::insert(int _id, const std::string &userName, const std::string &password, bool is_manager)
 {
     char sql[200] = {0};
-    snprintf(sql, 200, "insert into user(id,name,password,is_manager) values(%d,'%s','%s',%d)", _id, userName, password, is_manager);
+    snprintf(sql, 200, "insert into user(id,name,password,is_manager) values(%d,'%s','%s',%d)", _id, userName.c_str(), password.c_str(), is_manager);
+    log("sql",sql);
     return sql;
 }
 
 std::string UserModel::query_for_login(int _id, const std::string &password)
 {
     char sql[200] = {0};
-    snprintf(sql, 200, "select * from user where id=%d and password='%s'", _id, password);
+    snprintf(sql, 200, "select * from user where id=%d and password='%s'", _id, password.c_str());
     return sql;
 }
 

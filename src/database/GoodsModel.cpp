@@ -3,14 +3,14 @@
 std::string GoodsModel::insert(const std::string &_name, int _num)
 {
     char sql[200]={0};
-    snprintf(sql,200,"insert into products(name,num) values('%s',%d)",_name,_num);
+    snprintf(sql,200,"insert into products(name,num) values('%s',%d)",_name.c_str(),_num);
     return sql;
 }
 
 std::string GoodsModel::deleteGoodsByName(std::string &_name)
 {     
     char sql[200]={0};
-    snprintf(sql,200,"delete from products where name='%s'",_name);    
+    snprintf(sql,200,"delete from products where name='%s'",_name.c_str());    
     return sql;
 }
 
@@ -19,7 +19,7 @@ std::string GoodsModel::deleteGoodsByName(std::string &_name)
 std::string GoodsModel::updateGoodsNumByName(std::string &_name, int _num)
 {
     char sql[200]={0};
-    snprintf(sql,200,"update products set num=%d where name='%s'",_num,_name);
+    snprintf(sql,200,"update products set num=%d where name='%s'",_num,_name.c_str());
     return sql;
 }
 
@@ -32,7 +32,7 @@ std::string GoodsModel::queryAllGoods()
 std::string GoodsModel::queryByName(std::string &_name)
 {
     char sql[200]={0};
-    snprintf(sql,200,"select * from products where name='%s",_name);
+    snprintf(sql,200,"select * from products where name='%s",_name.c_str());
     return sql;
 }
 

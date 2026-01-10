@@ -15,12 +15,15 @@ void readFunc(int clientfd)
     while (true)
     {
         char recv_str[200] = {0};
-        if(recv(clientfd,recv_str,200,0)==0||recv(clientfd,recv_str,200,0)==-1)
+        int len=recv(clientfd,recv_str,200,0);
+        cout<<"recvice: "<<recv_str<<endl;
+        if(len==0||len==-1)
         {
             cout<<"连接断开"<<endl;
+            close(clientfd);
             exit(0);
         }  
-        cout<<"recvice: "<<recv_str<<endl;
+        
     }
 }
 

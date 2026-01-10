@@ -1,5 +1,7 @@
 #include<Server.hpp>
 
+#define DEBUG_COUT
+
 int main(int argc,char **argv)
 {
     EventLoop loop;

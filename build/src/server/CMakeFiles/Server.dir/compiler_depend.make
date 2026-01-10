@@ -6025,6 +6025,7 @@ src/server/CMakeFiles/Server.dir/__/database/GoodsModel.cpp.o: /home/user/github
   /usr/lib/gcc/x86_64-redhat-linux/14/include/stdint.h
 
 src/server/CMakeFiles/Server.dir/__/database/UserModel.cpp.o: /home/user/github_pro/supermarket/src/database/UserModel.cpp \
+  /home/user/github_pro/supermarket/include/Log.hpp \
   /home/user/github_pro/supermarket/include/database/Model.hpp \
   /home/user/github_pro/supermarket/include/database/User.hpp \
   /home/user/github_pro/supermarket/include/database/UserModel.hpp \
@@ -6261,6 +6262,7 @@ src/server/CMakeFiles/Server.dir/__/database/UserModel.cpp.o: /home/user/github_
   /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
+  /usr/include/c++/14/iostream \
   /usr/include/c++/14/istream \
   /usr/include/c++/14/iterator \
   /usr/include/c++/14/limits \

@@ -230,4 +230,6 @@ src/server/CMakeFiles/Server.dir/__/database/UserModel.cpp.o: \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
  /usr/include/mysql/errmsg.h \
- /home/user/github_pro/supermarket/include/database/User.hpp
+ /home/user/github_pro/supermarket/include/database/User.hpp \
+ /home/user/github_pro/supermarket/include/Log.hpp \
+ /usr/include/c++/14/iostream
