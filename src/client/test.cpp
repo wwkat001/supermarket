@@ -49,7 +49,7 @@ int main()
     while (true)
     {
         std::string send_str;
-        char recv_str[200] = {0};
+        char recv_str[500] = {0};
         json send_js;
         json recv_js;
 

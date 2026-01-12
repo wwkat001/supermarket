@@ -17,6 +17,11 @@ class User
     {
 
     }
+    User(int _id,std::string _name,bool _is_manager)
+    :id(_id),name(_name),is_manager(_is_manager)
+    {
+        
+    }
 
     int getId(){return id;};
 
