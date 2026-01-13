@@ -55,7 +55,14 @@ std::vector<std::string> UserModel::allFieldsUserToStringInVector(std::vector<Us
             json js;
             js["user_id"] = user.getId();
             js["user_name"] = user.getName();
-            js["is_manager"] = user.getIsManager();
+            if(user.getIsManager()==1)
+            {
+                js["is_manager"] = true;
+            }
+            else
+            {
+                js["is_manager"] = false;
+            }
             res.push_back(js.dump());
         }
     }

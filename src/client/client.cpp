@@ -13,6 +13,7 @@
 using json = nlohmann::json;
 
 int clientfd = 0;
+int user_id=0;
 sem_t rwsem;
 std::vector<User> usersInfo;
 std::vector<Goods> goodsInfo;
@@ -170,36 +171,39 @@ void startMenu()
 
 void userMenu()
 {
-    std::cout << "================" << std::endl;
-    std::cout << "1.商品销售" << std::endl;
-    std::cout << "2.进货" << std::endl;
-    std::cout << "3.查询所有货物信息" << std::endl;
-    std::cout << "4.精准查询货物信息" << std::endl;
-    std::cout << "5.退出" << std::endl;
-    std::cout << "================" << std::endl;
-    std::cout << "选项 : ";
-    int choice = 0;
-    std::cin >> choice;
-
-    switch (choice)
+    while (true)
     {
-    case 1:
-        send10();
-        break;
-    case 2:
-        send12();
-        break;
-    case 3:
-        send8();
-        break;
-    case 4:
-        send9();
-        break;
-    case 5:
-        exit(0);
-        break;
-    default:
-        break;
+        std::cout << "================" << std::endl;
+        std::cout << "1.商品销售" << std::endl;
+        std::cout << "2.进货" << std::endl;
+        std::cout << "3.查询所有货物信息" << std::endl;
+        std::cout << "4.精准查询货物信息" << std::endl;
+        std::cout << "5.退出" << std::endl;
+        std::cout << "================" << std::endl;
+        std::cout << "选项 : ";
+        int choice = 0;
+        std::cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            send10();
+            break;
+        case 2:
+            send12();
+            break;
+        case 3:
+            send8();
+            break;
+        case 4:
+            send9();
+            break;
+        case 5:
+            exit(0);
+            break;
+        default:
+            break;
+        }
     }
 }
 
@@ -374,6 +378,7 @@ void send3()
     sendjs["msg_id"] = 3;
 
     cinUserId(sendjs);
+    user_id=sendjs["user_id"].get<int>();
     cinPassword(sendjs);
 
     std::string sendbuf = sendjs.dump();
@@ -400,7 +405,11 @@ void send5()
     sendjs["msg_id"] = 5;
 
     cinUserId(sendjs);
-
+    if(user_id==sendjs["user_id"].get<int>())
+    {
+        std::cout<<"不可删除自己账号!!!!!"<<std::endl;
+        return;
+    }
     std::string sendbuf = sendjs.dump();
     send(clientfd, sendbuf.c_str(), strlen(sendbuf.c_str()), 0);
 }
@@ -441,6 +450,8 @@ void send9()
 {
     json sendjs;
     sendjs["msg_id"] = 9;
+
+    cinGoodsName(sendjs);
 
     std::string sendbuf = sendjs.dump();
     send(clientfd, sendbuf.c_str(), strlen(sendbuf.c_str()), 0);
@@ -528,7 +539,7 @@ void registerResponse(json &js)
     }
     else
     {
-        std::string errmsg = js["errno_msg"];
+        std::string errmsg = js["error_msg"];
         std::cout << "注册失败!!!" << std::endl
                   << "错误信息:" << errmsg << std::endl;
     }
@@ -570,6 +581,10 @@ void parseGoodsInfo(json &js)
             goodsInfo.push_back(goods);
         }
     }
+    else
+    {
+        std::cout<<"查询结果为空"<<std::endl;
+    }
 }
 
 void printGoodsInfo()
@@ -591,7 +606,7 @@ void parseUserInfo(json &js)
         for (std::string &str : vec)
         {
             json tmp = json::parse(str);
-            User user(tmp["id"].get<int>(), tmp["user_name"], tmp["is_manager"].get<bool>());
+            User user(tmp["user_id"].get<int>(), tmp["user_name"], tmp["is_manager"].get<bool>());
             usersInfo.push_back(user);
         }
     }
@@ -609,7 +624,7 @@ void printUserInfo()
 
 void actionResponse(json &js)
 {
-    if (js["success"])
+    if (js["success"].get<int>())
     {
         std::cout << "操作成功" << std::endl;
     }

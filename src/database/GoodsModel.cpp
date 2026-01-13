@@ -1,9 +1,11 @@
 #include "GoodsModel.hpp"
+#include"Log.hpp"
 
 std::string GoodsModel::insert(const std::string &_name, int _num)
 {
     char sql[200]={0};
     snprintf(sql,200,"insert into products(name,num) values('%s',%d)",_name.c_str(),_num);
+    log("sql:",sql);
     return sql;
 }
 
@@ -26,13 +28,14 @@ std::string GoodsModel::updateGoodsNumByName(std::string &_name, int _num)
 std::string GoodsModel::queryAllGoods()
 {
     char sql[200]={"select * from products"};
+    log("sql:",sql);
     return sql;
 }
 
 std::string GoodsModel::queryByName(std::string &_name)
 {
     char sql[200]={0};
-    snprintf(sql,200,"select * from products where name='%s",_name.c_str());
+    snprintf(sql,200,"select * from products where name='%s'",_name.c_str());
     return sql;
 }
 

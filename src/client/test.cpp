@@ -27,7 +27,7 @@ void readFunc(int clientfd)
     }
 }
 
-int main()
+int main0()
 {
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in server;

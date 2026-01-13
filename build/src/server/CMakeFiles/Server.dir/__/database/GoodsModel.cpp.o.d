@@ -234,4 +234,6 @@ src/server/CMakeFiles/Server.dir/__/database/GoodsModel.cpp.o: \
  /usr/include/mysql/mysql/client_plugin.h /usr/include/c++/14/stdlib.h \
  /usr/include/mysql/mysql/plugin_auth_common.h \
  /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
- /usr/include/mysql/errmsg.h
+ /usr/include/mysql/errmsg.h \
+ /home/user/github_pro/supermarket/include/Log.hpp \
+ /usr/include/c++/14/iostream

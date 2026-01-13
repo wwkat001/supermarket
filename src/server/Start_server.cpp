@@ -1,6 +1,6 @@
 #include<Server.hpp>
 
-#define DEBUG_COUT
+#define DEBUG_COUT 1
 
 int main(int argc,char **argv)
 {
